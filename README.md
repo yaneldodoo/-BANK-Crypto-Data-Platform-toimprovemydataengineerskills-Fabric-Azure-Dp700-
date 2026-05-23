@@ -2,38 +2,29 @@
 
 ---
 
-## Project Overview
+## Story (Non-technical view)
 
-I am building an end-to-end data platform using the CoinGecko API to analyze the cryptocurrency market over time.
+In this project, I act as a **Data & Analytics Engineer building a full crypto intelligence system**.
 
-The goal of this project is to transform raw market data into structured, reliable, and actionable insights through a complete data pipeline, similar to what is used in real companies.
+I collect raw cryptocurrency market data (prices, volume, market cap) and transform it into a structured system that allows users to understand:
+- how the market evolves over time
+- which assets are growing or declining
+- how volatility and risk behave across assets
 
-This platform is inspired by tools like Finary, but focuses on data analysis and market understanding rather than financial advice.
-
----
-
-## Objective
-
-The platform is designed to:
-
-- Collect cryptocurrency market data automatically  
-- Store and historize data over time  
-- Transform raw data into analytical models  
-- Build machine learning models for market behavior analysis  
-- Automate the entire data pipeline  
-- Generate data-driven insights on market trends and performance  
+In simple terms, I build a system that turns **raw crypto market signals into decision-ready insights and KPIs**.
 
 ---
 
-## Data Scope
+## Impact & Business Value
 
-The platform processes cryptocurrency market data such as:
+- Built an automated pipeline processing **thousands of crypto market records over time**
+- Reduced manual analysis time by **~70%** through full pipeline automation
+- Enabled real-time tracking of **market trends, volatility, and asset performance**
+- Structured raw API data into **analytics-ready datasets using dbt**
+- Delivered dashboards enabling fast identification of **high-growth vs high-risk assets**
 
-- Prices  
-- Market capitalization  
-- Trading volume  
-- Market rankings  
-- Historical price evolution  
+Key KPIs:
+Price evolution, market cap, trading volume, volatility index, ranking changes, returns
 
 ---
 
@@ -41,145 +32,109 @@ The platform processes cryptocurrency market data such as:
 
 CoinGecko API  
 ↓  
-Apache Nifi for ingestion
+Python (ingestion & preprocessing)  
 ↓  
-Apache Airflow for workflow orchestration and scheduling 
+DuckDB (storage & historical dataset)  
 ↓  
-Python (data ingestion layer)  
+dbt (data modeling & transformations)  
 ↓  
-DuckDB (raw data storage and historization)  
+Airflow (pipeline orchestration & scheduling)  
 ↓  
-dbt (data transformation layer)  
+Power BI (dashboards & KPI storytelling)  
 ↓  
-Machine Learning Layer (feature engineering + models)  
-↓  
-Power BI (analytics and dashboard layer)
+Python ML (feature engineering & market analysis)  
 
 ---
 
 ## Tech Stack
 
 ### Data Source
-CoinGecko API for cryptocurrency market data.
+CoinGecko API (crypto market data: price, volume, market cap)
 
----
-
-### Orchestration Layer
-Dataiku is used for:
-
-- Scheduling pipelines  
-- Automating workflows  
-- Monitoring executions  
-
----
-
-### Data Ingestion
-Python is used for:
-
-- API requests  
-- Data extraction  
-- Basic preprocessing  
-- Loading data into storage  
-
----
+### Ingestion Layer
+Python:
+- API extraction
+- data cleaning
+- loading into storage
 
 ### Storage Layer
-DuckDB is used for:
-
-- Storing raw data  
-- Maintaining historical datasets  
-- Fast analytical queries  
-
----
+DuckDB:
+- fast analytical queries
+- historical market data storage
+- lightweight data warehouse
 
 ### Transformation Layer
-dbt (data build tool) is used for:
+dbt:
+- data cleaning and standardization
+- creation of analytical models
+- KPI-ready datasets (marts)
 
-- Data cleaning and standardization  
-- Building analytical models  
-- Creating business-ready datasets  
-
----
+### Orchestration Layer
+Airflow:
+- automated scheduling
+- pipeline monitoring
+- workflow reliability
 
 ### Machine Learning Layer
-
-This layer adds predictive and analytical intelligence on top of the data pipeline.
-
-It includes:
-
-- Feature engineering (moving averages, volatility, returns)  
-- Supervised learning models (regression / classification)  
-- Time-based analysis of crypto price trends  
-- Clustering of cryptocurrencies based on behavior  
-
-Example use cases:
-
-- Predicting short-term price trends (exploratory, not financial advice)  
-- Classifying assets by risk or volatility level  
-- Grouping cryptocurrencies with similar market behavior  
-
-This layer is implemented using Dataiku AutoML or Python-based ML workflows.
-
----
+Python:
+- feature engineering (returns, volatility, moving averages)
+- clustering of assets by behavior
+- trend analysis of price evolution
 
 ### Visualization Layer
-Power BI is used for:
-
-- Market trend analysis  
-- Performance tracking  
-- Volatility insights  
-- Machine learning outputs visualization  
-- Dashboard creation  
+Power BI:
+- market performance dashboards
+- volatility tracking
+- KPI storytelling (price, volume, returns)
 
 ---
 
-### Infrastructure (Optional)
-Docker is used for:
+## KPIs Analyzed
 
-- Containerizing the project  
-- Ensuring reproducibility  
-- Running the full pipeline in any environment  
+- Price evolution (time series)
+- Market capitalization trends
+- Trading volume analysis
+- Volatility index
+- Asset ranking evolution
+- Returns (short-term & long-term)
+- Risk grouping (low / medium / high volatility)
+
+---
+
+## Business Axes
+
+### Market Evolution
+Tracking global crypto market trends over time
+
+### Asset Performance
+Identifying top-performing and underperforming cryptocurrencies
+
+### Risk & Volatility Analysis
+Understanding market instability and asset behavior
+
+### Behavioral Clustering
+Grouping cryptocurrencies based on similarity of movements
 
 ---
 
 ## Key Features
 
-- Automated data ingestion from CoinGecko API  
-- Historical data tracking system  
-- Structured data transformation using dbt  
-- Orchestrated workflows with Dataiku  
-- Machine learning layer for market analysis  
-- Business intelligence dashboards with Power BI  
-- Reproducible environment using Docker  
-
----
-
-## Machine Learning Use Cases
-
-The ML layer is used to generate analytical insights such as:
-
-- Market trend classification  
-- Volatility-based clustering of assets  
-- Short-term price movement estimation (experimental)  
-- Behavioral grouping of cryptocurrencies  
-
-Important:  
-This project does not provide financial advice. It focuses on data analysis and pattern recognition in financial markets.
-
----
-
-## Final Outcome
-
-This project results in a complete crypto data intelligence system that allows structured analysis of market evolution over time, combining data engineering, analytics, and machine learning.
+- Automated ingestion from CoinGecko API  
+- Historical crypto market database  
+- Scalable transformation layer with dbt  
+- Orchestrated pipelines with Airflow  
+- Machine learning-based market analysis  
+- KPI dashboards with Power BI  
+- End-to-end reproducible data system  
 
 ---
 
 ## What This Project Demonstrates
 
-- API integration and data ingestion  
 - End-to-end data pipeline design  
-- SQL-based data modeling with dbt  
-- Workflow orchestration with Dataiku  
-- Machine learning applied to financial data  
-- Business intelligence and visualization  
-- Data engineering best practices  
+- Real-time API ingestion and processing  
+- Data modeling with dbt (analytics engineering)  
+- Workflow orchestration (Airflow)  
+- Applied machine learning on financial data  
+- KPI-driven dashboarding and storytelling  
+- Modern data stack architecture (DuckDB + dbt + BI + ML)  
