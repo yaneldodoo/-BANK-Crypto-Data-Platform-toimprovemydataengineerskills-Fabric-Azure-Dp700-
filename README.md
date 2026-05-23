@@ -41,7 +41,9 @@ The platform processes cryptocurrency market data such as:
 
 CoinGecko API  
 ↓  
-Dataiku (workflow orchestration and scheduling)  
+Apache Nifi for ingestion
+↓  
+Apache Airflow for workflow orchestration and scheduling 
 ↓  
 Python (data ingestion layer)  
 ↓  
