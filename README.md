@@ -2,10 +2,11 @@
 
 Projet de Data Engineering end-to-end construit dans Microsoft Fabric à partir de l’API CoinGecko.
 
-👉 :contentReference[oaicite:0]{index=0}  
-👉 :contentReference[oaicite:1]{index=1}  
+## Contexte
 
----
+Projet réalisé dans une démarche de montée en compétences en Data Engineering et préparation à la certification :
+
+👉 Microsoft DP-700
 
 ## Objectif
 
@@ -67,14 +68,6 @@ Ce projet démontre :
 - la maîtrise d’un environnement cloud moderne
 - la transformation et modélisation de données
 - la création de dashboards décisionnels
-
----
-
-## Contexte
-
-Projet réalisé dans une démarche de montée en compétences en Data Engineering et préparation à la certification :
-
-👉 Microsoft DP-700
 
 ---
 
