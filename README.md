@@ -1,140 +1,83 @@
-# Crypto Market Intelligence Platform (CoinGecko)
+# Crypto Data Platform – Microsoft Fabric
+
+Projet de Data Engineering end-to-end construit dans Microsoft Fabric à partir de l’API CoinGecko.
+
+👉 :contentReference[oaicite:0]{index=0}  
+👉 :contentReference[oaicite:1]{index=1}  
 
 ---
 
-## Story (Non-technical view)
+## Objectif
 
-In this project, I act as a **Data & Analytics Engineer building a full crypto intelligence system**.
-
-I collect raw cryptocurrency market data (prices, volume, market cap) and transform it into a structured system that allows users to understand:
-- how the market evolves over time
-- which assets are growing or declining
-- how volatility and risk behave across assets
-
-In simple terms, I build a system that turns **raw crypto market signals into decision-ready insights and KPIs**.
+Construire une plateforme de données cloud permettant de :
+- collecter des données crypto en temps réel
+- structurer une architecture Lakehouse
+- transformer et modéliser les données
+- générer des KPIs exploitables
+- créer des dashboards décisionnels
 
 ---
 
-## Impact & Business Value
+## Cas d’usage
 
-- Built an automated pipeline processing **thousands of crypto market records over time**
-- Reduced manual analysis time by **~70%** through full pipeline automation
-- Enabled real-time tracking of **market trends, volatility, and asset performance**
-- Structured raw API data into **analytics-ready datasets using dbt**
-- Delivered dashboards enabling fast identification of **high-growth vs high-risk assets**
-
-Key KPIs:
-Price evolution, market cap, trading volume, volatility index, ranking changes, returns
+Ce projet simule une data platform moderne utilisée en entreprise pour analyser le marché des cryptomonnaies et suivre les tendances de performance.
 
 ---
 
-## System Architecture
+## Architecture
 
 CoinGecko API  
 ↓  
-Python (ingestion & preprocessing)  
+Data Factory (ingestion)  
 ↓  
-DuckDB (storage & historical dataset)  
+OneLake (stockage brut)  
 ↓  
-dbt (data modeling & transformations)  
+Dataflows / Notebooks (transformations)  
 ↓  
-Airflow (pipeline orchestration & scheduling)  
+Lakehouse (modélisation)  
 ↓  
-Power BI (dashboards & KPI storytelling)  
-↓  
-Python ML (feature engineering & market analysis)  
+Power BI (visualisation)
 
 ---
 
-## Tech Stack
+## Stack technique
 
-### Data Source
-CoinGecko API (crypto market data: price, volume, market cap)
-
-### Ingestion Layer
-Python:
-- API extraction
-- data cleaning
-- loading into storage
-
-### Storage Layer
-DuckDB:
-- fast analytical queries
-- historical market data storage
-- lightweight data warehouse
-
-### Transformation Layer
-dbt:
-- data cleaning and standardization
-- creation of analytical models
-- KPI-ready datasets (marts)
-
-### Orchestration Layer
-Airflow:
-- automated scheduling
-- pipeline monitoring
-- workflow reliability
-
-### Machine Learning Layer
-Python:
-- feature engineering (returns, volatility, moving averages)
-- clustering of assets by behavior
-- trend analysis of price evolution
-
-### Visualization Layer
-Power BI:
-- market performance dashboards
-- volatility tracking
-- KPI storytelling (price, volume, returns)
+- Microsoft Fabric  
+- OneLake (Data Lakehouse)  
+- Data Factory (pipelines)  
+- Spark Notebooks / Dataflows Gen2  
+- Power BI  
+- CoinGecko API  
 
 ---
 
-## KPIs Analyzed
+## KPIs générés
 
-- Price evolution (time series)
-- Market capitalization trends
-- Trading volume analysis
-- Volatility index
-- Asset ranking evolution
-- Returns (short-term & long-term)
-- Risk grouping (low / medium / high volatility)
+- Top gainers / losers du marché  
+- Volatilité des cryptomonnaies  
+- Performance des actifs sur différentes périodes  
+- Tendances globales du marché  
 
 ---
 
-## Business Axes
+## Valeur du projet
 
-### Market Evolution
-Tracking global crypto market trends over time
-
-### Asset Performance
-Identifying top-performing and underperforming cryptocurrencies
-
-### Risk & Volatility Analysis
-Understanding market instability and asset behavior
-
-### Behavioral Clustering
-Grouping cryptocurrencies based on similarity of movements
+Ce projet démontre :
+- la construction d’une pipeline data complète
+- la maîtrise d’un environnement cloud moderne
+- la transformation et modélisation de données
+- la création de dashboards décisionnels
 
 ---
 
-## Key Features
+## Contexte
 
-- Automated ingestion from CoinGecko API  
-- Historical crypto market database  
-- Scalable transformation layer with dbt  
-- Orchestrated pipelines with Airflow  
-- Machine learning-based market analysis  
-- KPI dashboards with Power BI  
-- End-to-end reproducible data system  
+Projet réalisé dans une démarche de montée en compétences en Data Engineering et préparation à la certification :
+
+👉 Microsoft DP-700
 
 ---
 
-## What This Project Demonstrates
+## Auteur
 
-- End-to-end data pipeline design  
-- Real-time API ingestion and processing  
-- Data modeling with dbt (analytics engineering)  
-- Workflow orchestration (Airflow)  
-- Applied machine learning on financial data  
-- KPI-driven dashboarding and storytelling  
-- Modern data stack architecture (DuckDB + dbt + BI + ML)  
+Projet personnel orienté Data Engineering, Analytics Engineering et architecture cloud moderne.
